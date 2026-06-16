@@ -1,0 +1,10 @@
+def add_without_arithmetic(a, b):
+    while b != 0:
+        carry = a & b
+        a = a ^ b
+        b = carry << 1
+    return a
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+result = add_without_arithmetic(num1, num2)
+print("The sum is:", result)

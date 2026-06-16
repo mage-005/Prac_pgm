@@ -1,0 +1,8 @@
+def have_opposite_signs(a, b):
+    return (a ^ b) < 0
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+if have_opposite_signs(num1, num2):
+    print("The numbers have OPPOSITE signs.")
+else:
+    print("The numbers have the SAME sign.")

@@ -1,0 +1,25 @@
+n1=int(input("enter the count of rice:"))
+n2=int(input("enter the count of toppings:"))
+nn1=[]
+for i in range(n1):
+    weight = int(input(f"Enter weight for rice {i+1}: "))
+    nn1.append(weight)
+nn2=[]
+for j in range(n2):
+    weight = int(input(f"Enter weight for toppings {j+1}: "))
+    nn2.append(weight)
+nn1.sort()
+nn2.sort()
+
+rice=0
+topping=0
+count=0
+
+while rice < n1 and topping < n2:
+    if nn2[topping] <= 2 * nn1[rice]:
+        count += 1
+        rice  += 1
+        topping += 1
+    else:
+        topping += 1
+print(f"Maximum number of sushi that can be made: {count}")

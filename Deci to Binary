@@ -1,0 +1,13 @@
+def decimal_to_binary_count():
+    try:
+        decimal = int(input("Enter a decimal number: "))
+        if decimal <= 0:
+            print("invalid input")
+            return
+        binary_str = bin(decimal)[2:]
+        count_ones = binary_str.count('1')
+        print(f"Binary equivalent: {binary_str}")
+        print(f"Count of 1's: {count_ones}")
+    except ValueError:
+        print("invalid input")
+decimal_to_binary_count()
